@@ -278,18 +278,25 @@
               </div>
               <div class="projectSecret" id="secret1"></div>
             </div> -->
+            <!-- {% for at in attachments %}
+            {{at.file.url}}
+            {% endfor %} -->
+
             {% for project in projects %}
             <div class="project" id="gameProject">
-              <div class="projectTitle">{{ project.title }}</div>
+              <div class="projectTitle">{{ project }}</div>
               <div class="projectImage">
                 <div class="imageWrap">
-                  {{project.images}}
-                  <!-- {% for i in project.images %} -->
+                  
+                  {% for at in attachments %}
+
+                  {% if at.project == project%}
                   <div class="projectImage">
-                    <img class="picture" src="{{ i.file.url }}">
+                    <img class="picture" src="{{ at.file.url }}">
                     
                   </div>
-                  <!-- {% endfor %} -->
+                  {% endif %}
+                  {% endfor %} 
                   
                 </div>
               </div>
@@ -430,7 +437,7 @@
           <div class="hand"></div>
         </div>
         <div class="secContact" id="content2">
-          <a class="secPhone" href="tel:+911234567">
+          <a class="secPhone" href="">
             <div class="phone"></div>
             <div class="phoneNumber">(91)-123-45-67</div>
           </a>
