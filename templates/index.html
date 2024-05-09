@@ -2,7 +2,7 @@
 {% load static %}
 <html lang="en">
   <head>
-    <title>HoVinhThanh7893</title>
+    <title>Boburjon2201</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -89,7 +89,14 @@
         <div class="lineSec2" id = "content2"></div>
         <div class="sec2Part" id="content3">
           <div>I'm a Back-end Developer 💻</div>
-          <!-- <div class="skill">
+          <div class="skill">
+            <div class="softwarePro"></div>
+            <div class="softwarePro"></div>
+            <div class="softwarePro"></div>
+            <div class="softwarePro"></div>
+            <!-- <div class="softwarePro"></div>
+            <div class="softwarePro"></div> -->
+            <!-- <div class="softwarePro"></div>
             <div class="softwarePro"></div>
             <div class="softwarePro"></div>
             <div class="softwarePro"></div>
@@ -100,15 +107,8 @@
             <div class="softwarePro"></div>
             <div class="softwarePro"></div>
             <div class="softwarePro"></div>
-            <div class="softwarePro"></div>
-            <div class="softwarePro"></div>
-            <div class="softwarePro"></div>
-            <div class="softwarePro"></div>
-            <div class="softwarePro"></div>
-            <div class="softwarePro"></div>
-            <div class="softwarePro"></div>
-            <div class="softwarePro"></div>
-          </div> -->
+            <div class="softwarePro"></div> -->
+          </div>
         </div>
         <div class="lineSec2" id = "content4"></div>
         <div class="sec2Part" id="content5">
@@ -122,8 +122,8 @@
             <div class="softwareDes"></div>
             <div class="softwareDes"></div>
             <div class="softwareDes"></div>
-          </div>
-        </div> -->
+          </div> -->
+        </div>
         <a href="#section3" class="nextButton2" id="content6">
           <span class="next"></span>
           <span class="next"></span>
@@ -161,23 +161,25 @@
                 </a>
               </div>
             </div> -->
+            {% for bot in bots %}
             <div class="project" id="webProject">
-              <div class="projectTitle">Kalkulator bot</div>
+              <div class="projectTitle">{{ bot.title }}</div>
               <div class="projectImage">
-                  <img class="picture" src="{% static './images/photo_2024-05-07_19-32-33.jpg' %}">
+                  <img class="picture" src="{{bot.image.url}}">
               </div>
-              <div class="projectSoftware">
-                <img class="projectIcon" src="{% static './icons/HTML.png' %}">
+              <!-- <div class="projectSoftware"> -->
+                <!-- <img class="projectIcon" src="{% static './icons/HTML.png' %}">
                 <img class="projectIcon" src="{% static './icons/CSS.png' %}">
-                <img class="projectIcon" src="{% static './icons/JavaScript.png' %}">
-              </div>
-              <!-- <div class="projectDes">
-                <a class="seemoreButton" href="https://hangvo0693.github.io/portfolio" target="_blank">
+                <img class="projectIcon" src="{% static './icons/JavaScript.png' %}"> -->
+              <!-- </div> -->
+              <div class="projectDes">
+                <a class="seemoreButton" href="{{ bot.link }}" target="_blank">
                   <div class="seemore">&lt; Visit page &gt;</div>
                 </a>
-              </div> -->
-            </div>
-            <div class="project" id="webProject">
+              </div>
+            
+            <!-- </div> -->
+            <!-- <div class="project" id="webProject">
               <div class="projectTitle">Save bot</div>
               <div class="projectImage">
                   <img class="picture" src="{% static './images/photo_2024-05-07_19-30-53.jpg' %}">
@@ -187,13 +189,13 @@
                 <img class="projectIcon" src="{% static './icons/CSS.png' %}">
                 <img class="projectIcon" src="{% static './icons/Angular.png' %}">
                 <img class="projectIcon" src="{% static './icons/TypeScript.png' %}">
-              </div>
+              </div> -->
               <!-- <div class="projectDes">
                 <a class="seemoreButton" href="https://hovinhthanh7893.github.io/pokedex/" target="_blank">
                   <div class="seemore">&lt; Visit page &gt;</div>
                 </a>
               </div> -->
-            </div>
+            <!-- </div>
             <div class="project" id="webProject">
               <div class="projectTitle">School bot</div>
               <div class="projectImage">
@@ -204,13 +206,14 @@
                 <img class="projectIcon" src="{% static './icons/CSS.png' %}">
                 <img class="projectIcon" src="{% static './icons/JavaScript.png' %}">
                 <img class="projectIcon" src="{% static './icons/Vue.png' %}">
-              </div>
+              </div> -->
               <!-- <div class="projectDes">
                 <a class="seemoreButton" href="https://hovinhthanh7893.github.io/numerology/" target="_blank">
                   <div class="seemore">&lt; Visit page &gt;</div>
                 </a>
               </div> -->
             </div>
+            {% endfor %}
             <!-- <div class="project" id="webProject">
               <div class="projectTitle">VEGACORNER</div>
               <div class="projectImage">
@@ -275,19 +278,19 @@
               </div>
               <div class="projectSecret" id="secret1"></div>
             </div> -->
+            {% for project in projects %}
             <div class="project" id="gameProject">
-              <div class="projectTitle">Book Portfolio</div>
+              <div class="projectTitle">{{ project.title }}</div>
               <div class="projectImage">
                 <div class="imageWrap">
+                  {{project.images}}
+                  <!-- {% for i in project.images %} -->
                   <div class="projectImage">
-                    <img class="picture" src="{% static './images/photo_2024-05-07_19-27-07.jpg' %}">
+                    <img class="picture" src="{{ i.file.url }}">
+                    
                   </div>
-                  <div class="projectImage">
-                    <img class="picture" src="{% static './images/photo_2024-05-07_19-53-27.jpg' %}">
-                  </div>
-                  <div class="projectImage">
-                    <img class="picture" src="{% static './images/photo_2024-05-07_19-53-54.jpg' %}">
-                  </div>
+                  <!-- {% endfor %} -->
+                  
                 </div>
               </div>
               <div class="imgIndex">
@@ -301,7 +304,8 @@
               </div>
               <div class="projectSecret" id="secret2"></div>
             </div>
-            <div class="project" id="gameProject">
+            {% endfor %}
+            <!-- <div class="project" id="gameProject">
               <div class="projectTitle">Tangem opa</div>
               <div class="projectImage">
                 <div class="imageWrap">
@@ -313,13 +317,13 @@
                 </div>
                 <div class="projectImage">
                   <img class="picture" src="{% static './images/photo_2024-05-07_19-49-43.jpg' %}">
-                </div>
+                </div> -->
                   <!-- <img class="picture" src="https://static.wixstatic.com/media/0d77ad_efe2f29859a1405d833748e64bcf6413~mv2.png">
                   <img class="picture" src="https://static.wixstatic.com/media/0d77ad_50fc96d691b24e198b4dd74a7529374a~mv2.png">
                   <img class="picture" src="https://static.wixstatic.com/media/0d77ad_b3cc7ab24cfd4f92a0c7296112702aeb~mv2.png">
                   <img class="picture" src="https://static.wixstatic.com/media/0d77ad_254fa8c6dfd84d33b99302c0563c536f~mv2.png">
                   <img class="picture" src="https://static.wixstatic.com/media/0d77ad_0b3eafd31a604665859f44ae754ef454~mv2.png"> -->
-                </div>
+                <!-- </div>
               </div>
               <div class="imgIndex">
                 <div class="imgButton" id="prevImg"></div>
@@ -334,12 +338,12 @@
                 <div class="imgButton" id="nextImg"></div>
               </div>
               <div class="projectSecret" id="secret3"></div>
-              <!-- <div class="projectDes">
+               <div class="projectDes">
                 <a class="seemoreButton" href="https://www.youtube.com/watch?v=--2FK0n3sLg" target="_blank">
                   <div class="seemore">&lt; More details &gt;</div>
                 </a>
               </div> -->
-            </div>
+            <!-- </div>
             <div class="project" id="gameProject">
               <div class="projectTitle">DJ</div>
               <div class="projectImage">
@@ -373,12 +377,12 @@
                 <div class="imgButton" id="nextImg"></div>
               </div>
               <div class="projectSecret" id="secret4"></div>
-              <!-- <div class="projectDes">
+              <div class="projectDes">
                 <a class="seemoreButton" href="https://simmer.io/@hovinhthanh7893/indiana-aardewerk" target="_blank">
                   <div class="seemore">&lt; Play game &gt;</div>
                 </a>
-              </div> -->
-            </div>
+              </div>
+            </div> -->
             <!-- <div class="project" id="gameProject">
               <div class="projectTitle">WIJNBROEDERS.NL</div>
               <div class="projectImage">
@@ -426,18 +430,18 @@
           <div class="hand"></div>
         </div>
         <div class="secContact" id="content2">
-          <a class="secPhone" href="#" target="_blank">
+          <a class="secPhone" href="tel:+911234567">
             <div class="phone"></div>
             <div class="phoneNumber">(91)-123-45-67</div>
           </a>
-          <a class="secMail" href="mailto:boburraxmatillayev2201@gmail.com@gmail.com">
+          <a class="secMail" href="mailto:boburraxmatillayev2201@gmail.com">
             <div class="mail"></div>Send message
-          </a>
-        </div>
+        </a>        
+        </div>        
         <div class="secSocial" id="content3">
           <a
             class="social"
-            href="https://www.linkedin.com/in/hovinhthanh7893/"
+            href="https://www.linkedin.com"
             target="_blank"
           ></a>
           <a

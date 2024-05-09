@@ -237,7 +237,7 @@ function generateAirPlane() {
     flatShading: true,
     fog: false,
   });
-  const flagText = new THREE.TextureLoader().load("{% static'./images (2).jpg' %}");
+  const flagText = new THREE.TextureLoader().load("./peace-flag.jpg");
   const matFlag = new THREE.MeshStandardMaterial({
     map: flagText,
     roughness: 0.5,
@@ -826,3 +826,22 @@ Array(80).fill().forEach(generateStar);
 generateAirPlane();
 projectResize()
 animate();
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Telefon raqamini o'qish
+  const phoneNumberElement = document.querySelector('.phoneNumber');
+  // "Send message" tugmasini olish
+  const sendMessageButton = document.querySelector('.secMail');
+
+  if (phoneNumberElement && sendMessageButton) {
+      // "Send message" tugmasini bosganda
+      sendMessageButton.addEventListener('click', function(event) {
+          // `phoneNumberElement` elementidagi telefon raqamini oling
+          const phoneNumber = phoneNumberElement.textContent;
+          
+          // Matn yozish joyiga telefon raqamini ko'chirish
+          const mailToHref = `mailto:boburraxmatillayev2201@gmail.com?subject=Message&body=Hello, I want to talk about the phone number: ${phoneNumber}`;
+          sendMessageButton.setAttribute('href', mailToHref);
+      });
+  }
+});

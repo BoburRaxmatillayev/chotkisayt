@@ -470,39 +470,39 @@ section {
   width: 3vh;
   height: 3vh;
 }
-.softwarePro:nth-of-type(1) {
+/* .softwarePro:nth-of-type(1) {
   background: url("./icons/C-Sharp.png") no-repeat;
   background-size: cover;
-}
-.softwarePro:nth-of-type(2) {
+} */
+.softwarePro:nth-of-type(1) {
   background: url("./icons/Visual-Studio.png") no-repeat;
   background-size: cover;
 }
-.softwarePro:nth-of-type(3) {
+.softwarePro:nth-of-type(2) {
   background: url("./icons/HTML.png") no-repeat;
   background-size: cover;
 }
-.softwarePro:nth-of-type(4) {
+.softwarePro:nth-of-type(3) {
   background: url("./icons/CSS.png") no-repeat;
   background-size: cover;
 }
-.softwarePro:nth-of-type(5) {
+/* .softwarePro:nth-of-type(5) {
   background: url("./icons/JavaScript.png") no-repeat;
   background-size: cover;
 }
 .softwarePro:nth-of-type(6) {
   background: url("./icons/TypeScript.png") no-repeat;
   background-size: cover;
-}
-.softwarePro:nth-of-type(7) {
+} */
+.softwarePro:nth-of-type(4) {
   background: url("./icons/Python.png") no-repeat;
   background-size: cover;
 }
-.softwarePro:nth-of-type(8) {
+.softwarePro:nth-of-type(5) {
   background: url("./icons/Visual-Studio-Code.png") no-repeat;
   background-size: cover;
 }
-.softwarePro:nth-of-type(9) {
+/* .softwarePro:nth-of-type(9) {
   background: url("./icons/React.png") no-repeat;
   background-size: cover;
 }
@@ -517,16 +517,16 @@ section {
 .softwarePro:nth-of-type(12) {
   background: url("./icons/Vue.png") no-repeat;
   background-size: cover;
-}
-.softwarePro:nth-of-type(13) {
+} */
+/* .softwarePro:nth-of-type(13) {
   background: url("./icons/Angular.png") no-repeat;
   background-size: cover;
-}
-.softwarePro:nth-of-type(14) {
+} */
+.softwarePro:nth-of-type(6) {
   background: url("./icons/PostgreSQL.png") no-repeat;
   background-size: cover;
 }
-.softwarePro:nth-of-type(15) {
+/* .softwarePro:nth-of-type(15) {
   background: url("./icons/FastAPI.png") no-repeat;
   background-size: cover;
 }
@@ -537,11 +537,11 @@ section {
 .softwarePro:nth-of-type(17) {
   background: url("./icons/Axios.png") no-repeat;
   background-size: cover;
-}
-.softwarePro:nth-of-type(18) {
+} */
+/* .softwarePro:nth-of-type(18) {
   background: url("./icons/Threejs.png") no-repeat;
   background-size: cover;
-}
+} */
 
 .secPortTit {
   flex-wrap: wrap;
@@ -757,19 +757,19 @@ section {
   animation: sound 4s ease-in-out infinite;
   opacity: 0.5;
 }
-.leftright:nth-of-type(1) {
-  background: url("./icons/icon-slide-prev-100.png") no-repeat;
+/* .leftright:nth-of-type(1) {
+  background: url("./icons/Visual-Studio.png") no-repeat;
   background-size: cover;
   left: 0;
   transform: translateX(calc(20vw - 30px));
 }
-.leftright:nth-of-type(2) {
-  background: url("./icons/icon-slide-next-100.png") no-repeat;
+ .leftright:nth-of-type(2) {
+  background: url("./icons/HTML.png") no-repeat;
   background-size: cover;
   right: 0;
   transform: translateX(calc(-20vw + 30px));
-}
-.leftright:hover {
+} */
+/* .leftright:hover {
   cursor: url("./icons/pointer-yellow.png"), pointer;
   opacity: 1;
 }
@@ -780,7 +780,7 @@ section {
 .leftright:nth-of-type(2):active {
   background: url("./icons/icon-slide-next-clicked-100.png") no-repeat;
   background-size: cover;
-}
+} */
 
 .dotIndex {
   padding: 15px 20px;
