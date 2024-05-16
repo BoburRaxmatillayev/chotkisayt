@@ -29,3 +29,13 @@ class Attachment(models.Model):
     class Meta:
         verbose_name = 'Attachment'
         verbose_name_plural = 'Attachments'
+
+
+class Contact(models.Model):
+    name = models.CharField(max_length=250)
+    email = models.EmailField()
+    phone_number = models.CharField(max_length=13)
+    description = models.TextField()
+
+    def __str__(self):
+        return self.phone_number

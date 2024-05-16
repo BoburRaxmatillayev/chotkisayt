@@ -437,14 +437,13 @@
           <div class="hand"></div>
         </div>
         <div class="secContact" id="content2">
-          <a class="secPhone" href="">
-            <div class="phone"></div>
-            <div class="phoneNumber">(91)-123-45-67</div>
-          </a>
-          <a class="secMail" href="mailto:boburraxmatillayev2201@gmail.com">
-            <div class="mail"></div>Send message
-        </a>        
-        </div>        
+          <form id="contactForm" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="secMail"><button class="" type="submit">Send message</button></div>
+          </form>
+        </div>
+               
         <div class="secSocial" id="content3">
           <a
             class="social"
@@ -487,6 +486,6 @@
       </div>
       <a href="#section1" class="moveUp"></a>
     </footer>
-    <script type="module" src="{% static './index.js' %}"></script>
+    <script type="module" src="{% static 'index.js' %}"></script>
   </body>
   </html>

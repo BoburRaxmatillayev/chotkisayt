@@ -237,7 +237,7 @@ function generateAirPlane() {
     flatShading: true,
     fog: false,
   });
-  const flagText = new THREE.TextureLoader().load("{% static 'images  /peace-flag.jpg' %}");
+  const flagText = new THREE.TextureLoader().load("{% static '/peace-flag.jpg' %}");
   const matFlag = new THREE.MeshStandardMaterial({
     map: flagText,
     roughness: 0.5,
@@ -419,7 +419,7 @@ let currentWebSlide = Math.ceil(totalWebSlide / 2);
 document
   .querySelector("#nextWebButton")
   .addEventListener("click", function(event) {
-    const whoosh = new Audio("./audios/Whoosh.mp3");
+    const whoosh = new Audio("{%static '/audios/Whoosh.mp3' %}");
     whoosh.play();
     document.querySelectorAll("#webProject")[currentWebSlide-1].classList.remove("is-in");
     document.querySelectorAll("#dotWeb")[currentWebSlide-1].classList.remove("is-at");
@@ -435,7 +435,7 @@ document
 document
   .querySelector("#prevWebButton")
   .addEventListener("click", function(event) {
-    const whoosh = new Audio("./audios/Whoosh.mp3");
+    const whoosh = new Audio("{% static '/audios/Whoosh.mp3' %}");
     whoosh.play();
     document.querySelectorAll("#webProject")[currentWebSlide-1].classList.remove("is-in");
     document.querySelectorAll("#dotWeb")[currentWebSlide-1].classList.remove("is-at");
@@ -472,7 +472,7 @@ document
 document
   .querySelector("#prevGameButton")
   .addEventListener("click", function(event) {
-    const whoosh = new Audio("./audios/Whoosh.mp3");
+    const whoosh = new Audio("{% static '/audios/Whoosh.mp3' %}");
     whoosh.play();
     document.querySelectorAll("#gameProject")[currentGameSlide-1].classList.remove("is-in");
     document.querySelectorAll("#dotGame")[currentGameSlide-1].classList.remove("is-at");
@@ -489,7 +489,7 @@ document
 //Next image
 document.querySelectorAll("#nextImg").forEach((each) => {
   each.addEventListener("click", function(event) {
-    const whoosh = new Audio("./audios/Whoosh.mp3");
+    const whoosh = new Audio("{% static '/audios/Whoosh.mp3' %}");
     whoosh.play();
     const amount = this.closest(".project").children[2].children[1].children.length;
     const currentImage = this.closest(".project").children[3].getBoundingClientRect().width;
@@ -510,7 +510,7 @@ document.querySelectorAll("#nextImg").forEach((each) => {
 //Previous image
 document.querySelectorAll("#prevImg").forEach((each) => {
   each.addEventListener("click", function(event) {
-    const whoosh = new Audio("./audios/Whoosh.mp3");
+    const whoosh = new Audio("{% static '/audios/Whoosh.mp3'% }");
     whoosh.play();
     const amount = this.closest(".project").children[2].children[1].children.length;
     const currentImage = this.closest(".project").children[3].getBoundingClientRect().width;
@@ -544,7 +544,7 @@ document
 });
 
 //SOUND TOGGLE
-const backgroundSound = new Audio("./audios/Gratitude_Spiritual-Moment.mp3");
+const backgroundSound = new Audio("{% static 'audios/Gratitude_Spiritual-Moment.mp3' %}");
 let soundOn = false;
 document
   .querySelector(".sound")
@@ -552,14 +552,14 @@ document
     if (soundOn === true) {
       this.style.opacity = 1;
       backgroundSound.pause();
-      this.style.backgroundImage = "url('./icons/icon-mute-96.png')";
+      this.style.backgroundImage = "{% static 'icons/icon-mute-96.png' %}";
       soundOn = false;
     } else {
       this.style.opacity = 0.2;
       backgroundSound.play();
       backgroundSound.volume = 0.5;
       backgroundSound.loop = true;
-      this.style.backgroundImage = "url('./icons/icon-sound-96.png')";
+      this.style.backgroundImage = "{%static'/icons/icon-sound-96.png' %}";
     soundOn = true;
     }
 });
@@ -567,7 +567,7 @@ document
 //WHOOSH SOUND
 document.querySelectorAll("a").forEach((each) => {
   each.addEventListener("click", function(event) {
-    const whoosh = new Audio("./audios/Whoosh.mp3");
+    const whoosh = new Audio("{%static 'audios/Whoosh.mp3' %}");
     whoosh.play();
   });
 });
